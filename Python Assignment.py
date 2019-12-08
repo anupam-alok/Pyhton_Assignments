@@ -82,21 +82,7 @@ print(reverse)
 # In[19]:
 
 
-def takeInpt():
-    inp = input("Enter String : ")
-    li = []
-    strn = ""
-    newStr = ""
-    for n in inp:
-        strn = strn + n
-        if (n == " "):
-            li.append(strn)
-            strn = ""
-    li.append(strn)
-    prnStr = strFormat(newStr,li)
-    print("\n Output : ", prntStr)
-
-    def strFormat(newStr, li):
+def strFormat(newStr, li):
         frmStr = ""
         for n in li:
             newStr = newStr + n
@@ -112,7 +98,22 @@ def takeInpt():
         else :
             frmStr = frmStr +'\n \t \t \t' + ' ' + newStr
         return (frmStr)
-takeInput()
+def takeInpt():
+    inp = input("Enter String : ")
+    li = []
+    strn = ""
+    newStr = ""
+    for n in inp:
+        strn = strn + n
+        if (n == " "):
+            li.append(strn)
+            strn = ""
+    li.append(strn)
+    prntStr = strFormat(newStr,li)
+    print("\n Output : ", prntStr)
+
+    
+takeInpt()
 
 
 # In[ ]:
